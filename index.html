@@ -5,10 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT developers</title>
     <link href="index.css" rel="stylesheet">
+    <script src="js/dot.js"></script>
+    <script src="js/jquery.js"></script>
 </head>
 <body class="page">
-    <h1>Hello world</h1>
+    <header class="header page__header">
+        <div class="header__backgroundNavigation">
+            <div class="header__containerNavigation">
+                <div class="header__navigation">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a class="link link_color_white list__link" href="#">Dipartimento per la Trasformazione Digitale + AgID</a>
+                        </li>
+                    </ul>
 
-    <script src="index.js"></script>
+                    <ul class="list" id="list"></ul>
+                </div>
+
+                <div class="header__tablet">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a class="link link_color_white list__link" href="#">ITA &#9660;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__backgroundNavbar">
+            <div class="header__containerNavbar">
+                <div class="header__navbar">
+                    <div class="header__logo">
+                        <a class="logo" href="#">
+                            <img class="logo__icon" src="img/logo-it.svg">
+                        </a>
+                    </div>
+                    <div class="header__title">
+                        <h1 class="title"><a class="link link_color_white" href="#">Developers Italia</a></h1>
+                        <p class="text text_color_white">Sviluppiamo i servizi pubblici, insieme</p>
+                    </div>
+                    <div class="header__social">
+                        <ul class="list" id="socials"></ul>
+                    </div>
+                    <div class="header__search ">
+                        <ul class="list">
+                            <li class="list__item list__item_border_left">
+                                <p class="text text_color_white" href="#">Search</p>
+                            </li>
+                            <li class="list__item">
+                                <a class="link link_radio_white list__link" href="#">
+                                    <img class="list__icon" src="img/search.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__backgroundMenu">
+            <div class="header__containerMenu">
+                <div class="header__menu">
+                    <ul class="list" id="menu"></ul>
+                    <ul class="list list_hidden" id="asideMenu"></ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script type="text/template" id="list-template">
+        {{~ it.lists :list:index}}
+            <li class="list__item list__item_border_left">
+                <a class="link link_color_white list__link" href="#">{{=list.name}}</a>
+                {{? list.symbol}}<a class="link link_color_white list__link" href="#">{{=list.symbol}}</a>{{?}}
+            </li>
+        {{~}}
+    </script>
+
+    <script type="text/template" id="socials-template">
+        {{~ it.socials :social:index}}
+            <li class="list__item">
+                <a class="link list__link" href="#">
+                    <img class="list__icon" src="{{=social.src}}">
+                </a>
+            </li>
+        {{~}}
+    </script>
+
+    <script type="text/template" id="menu-template">
+        {{~ it.menu :menu:index}}
+            <li class="list__item list__item_background_white list__item_border_left">
+                <a class="link link_color_black list__link" href="#"><b>{{=menu.item}}</b></a>
+            </li>
+        {{~}}
+    </script>
+
+    <script type="text/template" id="asideMenu-template">
+        {{~ it.asideMenu :asideMenu:index}}
+            <li class="list__item">
+                <a class="link link_color_white list__link" href="#"><b>{{=asideMenu.item}}</b></a>
+            </li>
+        {{~}}
+    </script>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
