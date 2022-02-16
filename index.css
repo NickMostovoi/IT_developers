@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.page {
+    margin: 0;
+}
+
+
+/************************************************************ media */
+@media (max-width: 1250px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 700px) {
+
+}
+
+@media (max-width: 567px) {
+
+}
