@@ -173,6 +173,7 @@ html {
 @media (max-width: 567px) {
     .header__backgroundMenu {
         display: none;
+
     }
 
     .header__search {
