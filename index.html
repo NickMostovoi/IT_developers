@@ -75,12 +75,14 @@
 
     <main class="main page__main">
 
-        <div class="main__backgroundArticles">
+        <section class="main__backgroundArticles">
             <div class="main__containerArticles">
                 <div class="main__articles">
                     <div class="main__public">
                         <h2 class="title title_main">Il punto di riferimento per il software della Pubblica Amministrazione</h2>
-                        <a class="btn btn_main" href="#">Scopri di più</a>
+                        <div class="btn__wrapper">
+                            <a class="btn btn_main" href="#">Scopri di più</a>
+                        </div>
                     </div>
                     <div class="main__news">
                         <h3 class="title title_main">NEWS</h3>
@@ -89,7 +91,24 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="main__backgroundBanner">
+            <div class="main__containerBanner">
+                <div class="main__banner">
+                    <div class="main__bannerText">
+                        <p class="text text_main">Sei un programmatore, uno smanettone del codice o un nerd in erba?</p>
+                        <h2 class="title title_secondary">Unisciti alla nostra community!</h2>
+                    </div>
+                    <div class="main__bannerButton">
+                        <a class="btn btn_main">
+                            <p class="text">Vieni su Slack</p>
+                            <img class="link link_radio_white" src="img/user.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
