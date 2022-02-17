@@ -19,7 +19,7 @@
                         </li>
                     </ul>
 
-                    <ul class="list" id="list"></ul>
+                    <ul class="list fn-list" id="list"></ul>
                 </div>
 
                 <div class="header__tablet">
@@ -54,7 +54,7 @@
                             </li>
                             <li class="list__item">
                                 <a class="link link_radio_white list__link" href="#">
-                                    <img class="list__icon" src="img/search.svg">
+                                    <img class="icon list__icon" src="img/search.svg">
                                 </a>
                             </li>
                         </ul>
@@ -73,9 +73,29 @@
         </div>
     </header>
 
+    <main class="main page__main">
+
+        <div class="main__backgroundArticles">
+            <div class="main__containerArticles">
+                <div class="main__articles">
+                    <div class="main__public">
+                        <h2 class="title title_main">Il punto di riferimento per il software della Pubblica Amministrazione</h2>
+                        <a class="btn btn_main" href="#">Scopri di più</a>
+                    </div>
+                    <div class="main__news">
+                        <h3 class="title title_main">NEWS</h3>
+                        <h2 class="title title_secondary">Il punto di riferimento per il software della Pubblica Amministrazione</h2>
+                        <a class="link link_color_white" href="#">LEGGI DI PIÙ →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
     <script type="text/template" id="list-template">
         {{~ it.lists :list:index}}
-            <li class="list__item list__item_border_left">
+            <li class="list__item list__item_border_left {{? list.state}}{{=list.state}}{{?}}">
                 <a class="link link_color_white list__link" href="#">{{=list.name}}</a>
                 {{? list.symbol}}<a class="link link_color_white list__link" href="#">{{=list.symbol}}</a>{{?}}
             </li>
@@ -86,7 +106,7 @@
         {{~ it.socials :social:index}}
             <li class="list__item">
                 <a class="link list__link" href="#">
-                    <img class="list__icon" src="{{=social.src}}">
+                    <img class="icon list__icon" src="{{=social.src}}">
                 </a>
             </li>
         {{~}}

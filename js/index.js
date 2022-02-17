@@ -3,21 +3,22 @@ console.log('Hello world!');
 var lists = [
     {
         name: 'Piano Triennale',
+        state: 'isActive'
     },
     {
-        name: 'Developers',
+        name: 'Developers'
     },
     {
-        name: 'Designers',
+        name: 'Designers'
     },
     {
-        name: 'Forum',
+        name: 'Forum'
     },
     {
-        name: 'Docs',
+        name: 'Docs'
     },
     {
-        name: 'GitHub',
+        name: 'GitHub'
     },
     {
         name: 'ITA',
@@ -72,3 +73,9 @@ $('#menu').html(doT.template($('#menu-template').html())({menu: menu}));
 $('#socials').html(doT.template($('#socials-template').html())({socials: socials}));
 $('#list').html(doT.template($('#list-template').html())({lists: lists}));
 
+$('.fn-list').on('click', function(e) {
+    if (e.target.className === 'link link_color_white list__link') {
+        $('.fn-list .isActive').removeClass('isActive');
+        $(e.target).parent().addClass('isActive');
+    }
+});

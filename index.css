@@ -12,6 +12,31 @@ html {
     background-color: #b9b9b9;
 }
 
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.btn_main {
+    border-radius: 5px;
+    color: #fff;
+    background-color: #06c;
+}
+
+.btn_main:hover {
+    background-color: #004b96;
+    transition-duration: 0.5s;
+}
+
+.title_main {
+    font-size: 50px;
+}
+
+.title_secondary {
+    font-size: 30px;
+}
+
 .header__tablet {
     display: none;
 }
@@ -95,12 +120,12 @@ html {
     height: 100%;
 }
 
-.list__icon {
+.icon {
     height: 30px;
     overflow: hidden;
 }
 
-.list__icon:hover {
+.icon:hover {
     transform: scale(1.2);
     transition-duration: 0.3s;
 }
@@ -143,6 +168,62 @@ html {
     align-items: center;
 }
 
+.isActive {
+    border-bottom: 1px solid #fff;
+}
+
+.main__backgroundArticles {
+    background-color: #0066cc;
+}
+
+.main__containerArticles {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.main__articles {
+    display: flex;
+    align-items: center;
+}
+
+.main__news,
+.main__public {
+    width: 50%;
+    height: 485px;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.main__public::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #f7f9fa;
+    width: 50vw;
+    background-image: url("img/back1.svg");
+}
+
+.main__news::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #cce6ff;
+    width: 50vw;
+    background-image: url("img/back2.svg");
+    background-repeat: no-repeat;
+    background-position: 70% -110%;
+}
+
 /************************************************************ media */
 @media (max-width: 1250px) {
 
@@ -164,6 +245,32 @@ html {
     .list_hidden {
         display: none;
     }
+
+    .main__articles {
+        flex-direction: column;
+    }
+
+    .main__news,
+    .main__public {
+        width: 100%;
+        height: 100%;
+        padding: 25px;
+        margin-top: 10px;
+    }
+
+    .main__news::before,
+    .main__public::before {
+        width: 100%;
+        background-size: contain;
+    }
+
+    .title_main {
+        font-size: 35px;
+    }
+
+    .title_secondary {
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -173,7 +280,6 @@ html {
 @media (max-width: 567px) {
     .header__backgroundMenu {
         display: none;
-
     }
 
     .header__search {
