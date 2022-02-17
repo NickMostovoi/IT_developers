@@ -9,7 +9,6 @@ html {
 
 .page {
     margin: 0 auto;
-    background-color: #b9b9b9;
     overflow-x: hidden;
 }
 
@@ -28,7 +27,11 @@ html {
     background-color: #06c;
 }
 
-.btn__wrapper {
+.btn_icon {
+    padding: 0 24px;
+}
+
+.btnWrapper {
     max-width: 150px;
 }
 
@@ -88,9 +91,9 @@ html {
     cursor: pointer;
 }
 
-.list__item:hover .link {
-    text-decoration: underline;
-}
+/*.list__item:hover .link {*/
+/*    text-decoration: underline;*/
+/*}*/
 
 .list__item_border_left {
     border-left: 1px solid #b9b9b9;
@@ -112,6 +115,10 @@ html {
 
 .link_color_black {
     color: #000;
+}
+
+.link_color_blue {
+    color: #0066cc;
 }
 
 .header__backgroundMenu,
@@ -291,11 +298,70 @@ html {
     min-width: 220px;
 }
 
-/************************************************************ media */
-@media (max-width: 1250px) {
-
+/************************************************************ section */
+.section {
+    padding: 50px 0;
+}
+.section_background_grey {
+    background-color: #dedede;
 }
 
+.section__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__header {
+    width: 100%;
+    border-bottom: 1px solid #818181;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.list__item_columns {
+    width: 25%;
+    align-items: flex-start;
+}
+
+.list__tile {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.tile__imgWrapper {
+    display: block;
+    filter: drop-shadow(30px 20px 20px rgba(90,103,114,.2));
+}
+
+.tile__img {
+    width: 100%;
+}
+
+.tile__img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.tile__title {
+    margin-bottom: 0;
+}
+
+.tile__description {
+    display: flex;
+}
+
+/************************************************************ media */
 @media (max-width: 1000px) {
     .header__navigation {
         display: none;
@@ -351,6 +417,14 @@ html {
         flex-direction: column;
         height: 80%;
     }
+
+    .section_list {
+        flex-wrap: wrap;
+    }
+
+    .list__item_columns {
+        width: 50%;
+    }
 }
 
 @media (max-width: 700px) {
@@ -368,5 +442,9 @@ html {
 
     .main__containerBanner {
         height: 450px;
+    }
+
+    .list__item_columns {
+        width: 100%;
     }
 }

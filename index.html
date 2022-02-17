@@ -80,7 +80,7 @@
                 <div class="main__articles">
                     <div class="main__public">
                         <h2 class="title title_main">Il punto di riferimento per il software della Pubblica Amministrazione</h2>
-                        <div class="btn__wrapper">
+                        <div class="btnWrapper">
                             <a class="btn btn_main" href="#">Scopri di più</a>
                         </div>
                     </div>
@@ -101,10 +101,39 @@
                         <h2 class="title title_secondary">Unisciti alla nostra community!</h2>
                     </div>
                     <div class="main__bannerButton">
-                        <a class="btn btn_main">
+                        <a class="btn btn_main btn_icon">
                             <p class="text">Vieni su Slack</p>
                             <img class="link link_radio_white" src="img/user.png">
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section_background_grey main__section">
+            <div class="section__container">
+                <div class="section__header">
+                    <h2 class="title title_main">Piattaforme</h2>
+                </div>
+                <ul class="list section_list" id="platform"></ul>
+                <div class="section__button">
+                    <div class="btnWrapper">
+                        <a class="btn btn_main">Vedi tutte</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section main__section">
+            <div class="section__container">
+                <div class="section__header">
+                    <h2 class="title title_main">Software a riuso ed open source</h2>
+                    <a class="link link_color_blue">COME LO USO →</a>
+                </div>
+                <ul class="list section_list" id="software"></ul>
+                <div class="section__button">
+                    <div class="btnWrapper">
+                        <a class="btn btn_main">Vedi tutte</a>
                     </div>
                 </div>
             </div>
@@ -143,6 +172,50 @@
         {{~ it.asideMenu :asideMenu:index}}
             <li class="list__item">
                 <a class="link link_color_white list__link" href="#"><b>{{=asideMenu.item}}</b></a>
+            </li>
+        {{~}}
+    </script>
+
+    <script type="text/template" id="platform-template">
+        {{~ it.platform :platform:index}}
+            <li class="list__item list__item_columns">
+                <div class="tile list__tile">
+                    <a class="tile__imgWrapper">
+                        <img class="tile__img" src="{{=platform.img}}">
+                    </a>
+                    <h2 class="title title_secondary tile__title">
+                        <a class="link link_color_black" href="#">{{=platform.title}}</a>
+                    </h2>
+                    <div class="tile__text">
+                        <p class="text">{{=platform.text}}</p>
+                    </div>
+                    <a class="link link_color_blue" href="{{=platform.link}}">LEGGI DI PIÙ →</a>
+                </div>
+            </li>
+        {{~}}
+    </script>
+
+    <script type="text/template" id="software-template">
+        {{~ it.software :software:index}}
+            <li class="list__item list__item_columns">
+                <div class="tile list__tile">
+                    <div class="tile__description">
+                        <a class="btn btn_icon">
+                            <img class="icon" src="img/user.png">
+                            <p class="text">{{=software.description}}</p>
+                        </a>
+                    </div>
+                    <a class="tile__imgWrapper">
+                        <img class="tile__img" src="{{=software.img}}">
+                    </a>
+                    <h2 class="title title_secondary tile__title">
+                        <a class="link link_color_black" href="#">{{=software.title}}</a>
+                    </h2>
+                    <div class="tile__text">
+                        <p class="text">{{=software.text}}</p>
+                    </div>
+                    <a class="link link_color_blue" href="{{=software.link}}">LEGGI DI PIÙ →</a>
+                </div>
             </li>
         {{~}}
     </script>
