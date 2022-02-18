@@ -1,5 +1,3 @@
-console.log('Hello world!');
-
 var lists = [
     {
         name: 'Piano Triennale',
@@ -128,7 +126,7 @@ var software = [
 
 $('#asideMenu').html(doT.template($('#asideMenu-template').html())({asideMenu: asideMenu}));
 $('#menu').html(doT.template($('#menu-template').html())({menu: menu}));
-$('#socials').html(doT.template($('#socials-template').html())({socials: socials}));
+$('.socialsTemplate').html(doT.template($('#socials-template').html())({socials: socials}));
 $('#list').html(doT.template($('#list-template').html())({lists: lists}));
 $('#platform').html(doT.template($('#platform-template').html())({platform: platform}));
 $('#software').html(doT.template($('#software-template').html())({software: software}));
