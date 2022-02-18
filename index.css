@@ -297,6 +297,25 @@ html {
     min-width: 220px;
 }
 
+.link_border_blue {
+    border: 1px solid #0066cc;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.list_wrap {
+    flex-wrap: wrap
+}
+
+.done {
+    background-color: #cce6ff;
+}
+
+.important {
+    background-color: rgba(232, 144, 116, 0.69);
+}
+
 /************************************************************ section */
 .section {
     padding: 50px 0;

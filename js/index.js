@@ -124,6 +124,53 @@ var software = [
     }
 ];
 
+var category = [
+    {
+        status: 'bad bad',
+        title: 'DAE RespondER'
+    },
+    {
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'very good',
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'bad bad',
+        title: 'DAE RespondER'
+    },
+    {
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'important',
+        title: 'DAE RespondER'
+    },
+    {
+        title: 'DAE RespondER'
+    },
+    {
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'done',
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'important',
+        title: 'DAE RespondER'
+    },
+    {
+        title: 'DAE RespondER'
+    },
+    {
+        status: 'important',
+        title: 'DAE RespondER'
+    }
+];
+
+$('#category').html(doT.template($('#category-template').html())({category: category}));
 $('#asideMenu').html(doT.template($('#asideMenu-template').html())({asideMenu: asideMenu}));
 $('#menu').html(doT.template($('#menu-template').html())({menu: menu}));
 $('.socialsTemplate').html(doT.template($('#socials-template').html())({socials: socials}));

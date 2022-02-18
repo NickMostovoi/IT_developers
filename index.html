@@ -10,71 +10,71 @@
 </head>
 <body class="page">
     <header class="header page__header">
-            <div class="header__backgroundNavigation">
-                <div class="header__containerNavigation">
-                    <div class="header__navigation">
+        <div class="header__backgroundNavigation">
+            <div class="header__containerNavigation">
+                <div class="header__navigation">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a class="link link_color_white list__link" href="#">Dipartimento per la Trasformazione Digitale + AgID</a>
+                        </li>
+                    </ul>
+
+                    <ul class="list fn-list" id="list"></ul>
+                </div>
+
+                <div class="header__tablet">
+                    <ul class="list">
+                        <li class="list__item">
+                            <a class="link link_color_white list__link" href="#">ITA &#9660;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__backgroundNavbar">
+            <div class="header__containerNavbar">
+                <div class="header__navbar">
+                    <div class="header__logo">
+                        <a class="logo" href="#">
+                            <img class="logo__icon" src="img/logo-it.svg">
+                        </a>
+                    </div>
+                    <div class="header__title">
+                        <h1 class="title"><a class="link link_color_white" href="#">Developers Italia</a></h1>
+                        <p class="text text_color_white">Sviluppiamo i servizi pubblici, insieme</p>
+                    </div>
+                    <div class="header__social">
+                        <ul class="list socialsTemplate"></ul>
+                    </div>
+                    <div class="header__search ">
                         <ul class="list">
+                            <li class="list__item list__item_border_left">
+                                <p class="text text_color_white" href="#">Search</p>
+                            </li>
                             <li class="list__item">
-                                <a class="link link_color_white list__link" href="#">Dipartimento per la Trasformazione Digitale + AgID</a>
+                                <a class="link link_radio_white list__link" href="#">
+                                    <img class="icon list__icon" src="img/search.svg">
+                                </a>
                             </li>
                         </ul>
-
-                        <ul class="list fn-list" id="list"></ul>
-                    </div>
-
-                    <div class="header__tablet">
-                        <ul class="list">
-                            <li class="list__item">
-                                <a class="link link_color_white list__link" href="#">ITA &#9660;</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="header__backgroundNavbar">
-                <div class="header__containerNavbar">
-                    <div class="header__navbar">
-                        <div class="header__logo">
-                            <a class="logo" href="#">
-                                <img class="logo__icon" src="img/logo-it.svg">
-                            </a>
-                        </div>
-                        <div class="header__title">
-                            <h1 class="title"><a class="link link_color_white" href="#">Developers Italia</a></h1>
-                            <p class="text text_color_white">Sviluppiamo i servizi pubblici, insieme</p>
-                        </div>
-                        <div class="header__social">
-                            <ul class="list socialsTemplate"></ul>
-                        </div>
-                        <div class="header__search ">
-                            <ul class="list">
-                                <li class="list__item list__item_border_left">
-                                    <p class="text text_color_white" href="#">Search</p>
-                                </li>
-                                <li class="list__item">
-                                    <a class="link link_radio_white list__link" href="#">
-                                        <img class="icon list__icon" src="img/search.svg">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="header__backgroundMenu">
+            <div class="header__containerMenu">
+                <div class="header__menu">
+                    <ul class="list" id="menu"></ul>
+                    <ul class="list list_hidden" id="asideMenu"></ul>
                 </div>
             </div>
-
-            <div class="header__backgroundMenu">
-                <div class="header__containerMenu">
-                    <div class="header__menu">
-                        <ul class="list" id="menu"></ul>
-                        <ul class="list list_hidden" id="asideMenu"></ul>
-                    </div>
-                </div>
-            </div>
-        </header>
+        </div>
+    </header>
 
     <main class="main page__main">
-            <section class="main__backgroundArticles">
+        <section class="main__backgroundArticles">
                 <div class="main__containerArticles">
                     <div class="main__articles">
                         <div class="main__public">
@@ -92,7 +92,7 @@
                 </div>
             </section>
 
-            <section class="main__backgroundBanner">
+        <section class="main__backgroundBanner">
                 <div class="main__containerBanner">
                     <div class="main__banner">
                         <div class="main__bannerText">
@@ -109,7 +109,7 @@
                 </div>
             </section>
 
-            <section class="section section_background_grey main__section">
+        <section class="section section_background_grey main__section">
                 <div class="section__container">
                     <div class="section__header">
                         <h2 class="title title_main">Piattaforme</h2>
@@ -123,7 +123,7 @@
                 </div>
             </section>
 
-            <section class="section main__section">
+        <section class="section main__section">
                 <div class="section__container">
                     <div class="section__header">
                         <h2 class="title title_main">Software a riuso ed open source</h2>
@@ -137,7 +137,17 @@
                     </div>
                 </div>
             </section>
-        </main>
+
+        <section class="section section_background_grey main__section">
+            <div class="section__container">
+                <div class="section__header">
+                    <h2 class="title title_main">Cerca per categoria</h2>
+                </div>
+
+                <ul class="list section_list list_wrap" id="category"></ul>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer page__footer">
         <div class="footer__background">
@@ -175,6 +185,21 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/template" id="category-template">
+        {{~ it.category :category:index}}
+            <li class="list__item">
+                <a class="link link_color_blue link_border_blue list__link
+                {{? category.status}}
+                    {{? category.status === 'bad bad'}}
+                        done
+                    {{??}}
+                        important
+                    {{?}}
+                {{?}}" href="#">{{=category.title}}</a>
+            </li>
+        {{~}}
+    </script>
 
     <script type="text/template" id="list-template">
         {{~ it.lists :list:index}}
